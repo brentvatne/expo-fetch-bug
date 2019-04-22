@@ -20,7 +20,7 @@ export default class App extends React.Component {
   uploadImageGood = async () => {
     const formData = new FormData()
     formData.append('images', {
-      name: `test.png`,
+      name: 'test.png',
       type: 'image/png',
       uri: 'https://facebook.github.io/react/logo-og.png',
     })
@@ -31,11 +31,10 @@ export default class App extends React.Component {
     const { photo } = this.state
     const formData = new FormData()
     formData.append('images', {
-      name: `test.jpg`,
+      name: 'test.jpg',
       type: 'image/jpeg',
       uri: photo.uri,
     })
-    console.log(photo.uri)
     await this.uploadImage(formData)
   }
 
@@ -77,7 +76,7 @@ export default class App extends React.Component {
                 flex: 0.1,
               }}>
               <Text
-                style={{ color: 'white', fontSize: 18, marginBottom: 10 }}>
+                style={{ color: 'white', fontSize: 18 }}>
                 Take Photo
               </Text>
             </TouchableOpacity>
